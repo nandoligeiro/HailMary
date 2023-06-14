@@ -2,8 +2,6 @@ package com.nandoligeiro.newbiblion.di
 
 import android.content.Context
 import androidx.room.Room
-import androidx.room.migration.Migration
-import androidx.sqlite.db.SupportSQLiteDatabase
 import com.nandoligeiro.newbiblion.data.room.AppDatabase
 import dagger.Module
 import dagger.Provides
@@ -16,22 +14,16 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object RoomModule {
 
-    private val MIGRATION_1_2 = object : Migration(1,2) {
-        override fun migrate(database: SupportSQLiteDatabase) {
-            database.execSQL(
-                "ALTER TABLE account ADD COLUMN client_alt_phone_on_route_sheets INTEGER NOT NULL DEFAULT(0)"
-            )
-        }
-    }
+    const val DB_NAME = "Biblion"
+    const val DB_PATH = "database/biblion.db"
 
     @Singleton
     @Provides
     fun provideDatabase(@ApplicationContext appContext: Context) = Room.databaseBuilder(
         context = appContext,
         AppDatabase::class.java,
-        "biblion")
-        .createFromAsset("database/biblion.db").build()
-
+        DB_NAME
+    ).createFromAsset(DB_PATH).build()
 
     @Singleton
     @Provides

@@ -2,6 +2,12 @@ package com.nandoligeiro.newbiblion.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
+
+val Black = Color(0xff000000)
+val Green = Color(0xffF5FF7D)
+val Grey = Color(0xffD9D9D9)
+val White = Color(0xffF4F4F4)
+
 val Green10 = Color(0xff003314)
 val Green20 = Color(0xff006627)
 val Green30 = Color(0xff00993b)

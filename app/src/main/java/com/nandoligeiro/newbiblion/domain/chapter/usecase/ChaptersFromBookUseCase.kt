@@ -13,10 +13,6 @@ class ChaptersFromBookUseCase @Inject constructor(
     coroutineContextProvider: CoroutineContextProvider
 ) : BackgroundExecutingUseCase<Int, List<ChapterUiModel>>(coroutineContextProvider) {
     override fun executeInBackground(request: Int): List<ChapterUiModel> {
-
         return chapterDomainToUiMapper.toUI(chaptersRepository.chapters(request))
-
     }
-
-
 }

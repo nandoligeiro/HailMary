@@ -25,13 +25,13 @@ class ChapterEntityToDataMapper {
         var initialChapter = INITIAL_VALUE
 
         verses.forEach { item ->
-            if (initialChapter == item.chapter) {
-                versesByChapter.add(Verse(item.verse, item.verseDescription))
-            } else {
+            if (initialChapter < item.chapter) {
                 mapChapters[initialChapter - INITIAL_VALUE] = versesByChapter
                 versesByChapter = ArrayList()
                 initialChapter++
+
             }
+            versesByChapter.add(Verse(item.verse, item.verseDescription))
         }
         mapChapters[initialChapter - INITIAL_VALUE] = versesByChapter
         return mapChapters.toList()

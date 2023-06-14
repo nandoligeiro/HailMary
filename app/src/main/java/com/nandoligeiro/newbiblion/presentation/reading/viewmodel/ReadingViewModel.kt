@@ -1,4 +1,4 @@
-package com.nandoligeiro.newbiblion.presentation.reading
+package com.nandoligeiro.newbiblion.presentation.reading.viewmodel
 
 import com.nandoligeiro.newbiblion.domain.chapter.usecase.ChaptersFromBookUseCase
 import com.nandoligeiro.newbiblion.presentation.abrstration.BaseViewModel

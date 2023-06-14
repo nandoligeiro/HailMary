@@ -17,32 +17,35 @@ import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
 
 private val DarkColorScheme = darkColorScheme(
-    primary = Color.Black,
-    onPrimary = Grey30,
-    primaryContainer = Green30,
-    onPrimaryContainer = Green90,
-    inversePrimary = Green40,
-    secondary = DarkGreen80,
-    onSecondary = DarkGreen20,
-    secondaryContainer = DarkGreen30,
-    onSecondaryContainer = DarkGreen90,
-    tertiary = Orange40,
-    onTertiary = Orange20,
-    tertiaryContainer = Orange30,
-    onTertiaryContainer = Orange40,
+    primary = Grey,
+    onPrimary = Black,
+    primaryContainer = Green,
+    onPrimaryContainer = Green,
+    background = Black,
+    onBackground = Black,
+    inversePrimary = Green,
+    secondary = Green,
+    onSecondary = Green,
+    secondaryContainer = Green,
+    onSecondaryContainer = Green,
     error = Red80,
     onError = Red20,
     errorContainer = Red30,
     onErrorContainer = Red90,
-    background = Color.Black,
-    onBackground = Color.White,
-    surface = GreenGrey30,
-    onSurface = GreenGrey80,
-    inverseSurface = Grey90,
-    inverseOnSurface = Grey10,
-    surfaceVariant = GreenGrey30,
-    onSurfaceVariant = GreenGrey80,
-    outline = GreenGrey80
+    surface = Black,
+    onSurface = Green
+
+//    tertiary = Black,
+//    onTertiary = Grey,
+//    tertiaryContainer = Green,
+//    onTertiaryContainer = Grey,
+//    surface = Green,
+//    onSurface = Green,
+//    inverseSurface = Black,
+//    inverseOnSurface = Green,
+//    surfaceVariant = Green,
+//    onSurfaceVariant =Grey,
+//    outline = Green
 )
 
 private val LightColorScheme = lightColorScheme(
@@ -73,6 +76,7 @@ private val LightColorScheme = lightColorScheme(
     onSurfaceVariant = GreenGrey30,
     outline = GreenGrey50
 )
+
 
 @Composable
 fun NewBiblionTheme(

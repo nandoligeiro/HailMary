@@ -14,5 +14,4 @@ data class VerseEntity(
     @ColumnInfo("capitulo") val chapter: Int,
     @ColumnInfo("versiculo") val verse: Int,
     @ColumnInfo("texto") val verseDescription: String,
-
 )
