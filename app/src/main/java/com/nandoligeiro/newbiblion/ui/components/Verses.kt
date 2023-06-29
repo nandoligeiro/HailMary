@@ -41,7 +41,7 @@ import com.nandoligeiro.newbiblion.ui.theme.Typography
 fun VersesList(readingViewModel: ReadingViewModel) {
 
     readingViewModel.getChaptersFromBook(0)
-    val chapters = readingViewModel.chapters.collectAsState()
+    val chapters = readingViewModel.result.collectAsState()
 
     Column(
         modifier = Modifier
