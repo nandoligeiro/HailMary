@@ -14,8 +14,8 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object RoomModule {
 
-    const val DB_NAME = "Biblion"
-    const val DB_PATH = "database/biblion.db"
+    private const val DB_NAME = "Biblion"
+    private const val DB_PATH = "database/biblion.db"
 
     @Singleton
     @Provides

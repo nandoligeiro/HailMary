@@ -13,10 +13,10 @@ import com.nandoligeiro.newbiblion.domain.chapter.usecase.ChaptersFromBookUseCas
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ViewModelComponent
+import dagger.hilt.components.SingletonComponent
 
 @Module
-@InstallIn(ViewModelComponent::class)
+@InstallIn(SingletonComponent::class)
 class DomainModule {
 
     @Provides
@@ -47,11 +47,9 @@ class DomainModule {
     @Provides
     fun providesChaptersFromBookUseCase(
         chaptersRepository: ChaptersRepository,
-        chapterDomainToUiMapper: ChapterDomainToUiMapper,
         coroutineContextProvider: CoroutineContextProvider
     ) = ChaptersFromBookUseCase(
         chaptersRepository,
-        chapterDomainToUiMapper,
         coroutineContextProvider
     )
 }
